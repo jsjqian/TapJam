@@ -40,21 +40,29 @@ public class DrumActivity extends Activity {
         clap = (ImageButton) findViewById(R.id.clap);
 
 
-        clap_sound = MediaPlayer.create(getApplicationContext(), R.raw.clap);
-        kick_sound = MediaPlayer.create(getApplicationContext(), R.raw.kick);
-        hihat_sound = MediaPlayer.create(getApplicationContext(), R.raw.hihat);
-        snare_sound = MediaPlayer.create(getApplicationContext(), R.raw.snare);
+//        clap_sound = MediaPlayer.create(getApplicationContext(), R.raw.clap);
+//        kick_sound = MediaPlayer.create(getApplicationContext(), R.raw.kick);
+//        hihat_sound = MediaPlayer.create(getApplicationContext(), R.raw.hihat);
+//        snare_sound = MediaPlayer.create(getApplicationContext(), R.raw.snare);
+
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n3);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
+//            }
+//        });
 
         snare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    snare_sound.setDataSource("../raw/snare.wav");
-                    snare_sound.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                snare_sound.start();
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.snare);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
 
 
             }
@@ -63,13 +71,13 @@ public class DrumActivity extends Activity {
         hihat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    hihat_sound.setDataSource("../raw/hihat.wav");
-                    hihat_sound.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                hihat_sound.start();
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.hihat);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
 
             }
         });
@@ -77,13 +85,13 @@ public class DrumActivity extends Activity {
         kick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    kick_sound.setDataSource("../raw/kick.wav");
-                    kick_sound.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                kick_sound.start();
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.kick);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
 
             }
         });
@@ -91,13 +99,13 @@ public class DrumActivity extends Activity {
         clap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    clap_sound.setDataSource("../raw/clap.wav");
-                    clap_sound.prepare();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                clap_sound.start();
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clap);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+                });
 
             }
         });
