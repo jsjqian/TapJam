@@ -44,14 +44,29 @@ public class Synth extends Activity {
         b7.setClickable(false);
         b8 = (ImageButton) findViewById(R.id.imageButton8);
         b8.setClickable(false);
+
+        b1.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+                    mp.start();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        public void onCompletion(MediaPlayer mp) {
+                            mp.release();
+                        }
+                    });
+
+                }
+
+                return true;
+            }
+        });
     }
 
     public void sound1(View v) {
 
-        String filename = "android.resource://" + this.getPackageName() + "/raw/f1";
-        MediaPlayer mp = new MediaPlayer();
-        try { mp.setDataSource(this,Uri.parse(filename)); } catch (Exception e) {}
-        try { mp.prepare(); } catch (Exception e) {}
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {

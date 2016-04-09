@@ -12,14 +12,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
-            android:onClick="sound1"
              >
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton1"
-                android:onClick="sound1"
                 android:duplicateParentState="true"
                 android:background="@drawable/b1"/>
         </LinearLayout>
