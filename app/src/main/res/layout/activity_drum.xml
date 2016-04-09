@@ -22,11 +22,36 @@
             android:background="@color/black_overlay" android:orientation="horizontal"
             tools:ignore="UselessParent">
 
-            <Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"
-                android:layout_width="0dp" android:layout_height="wrap_content"
-                android:layout_weight="1" android:text="@string/dummy_button" />
-
         </LinearLayout>
+
+        <ImageButton
+            android:layout_width="304dp"
+            android:layout_height="197dp"
+            android:text="Snare"
+            android:id="@+id/snare"
+            android:layout_gravity="left|top" />
+
+        <ImageButton
+            android:layout_width="305dp"
+            android:layout_height="193dp"
+            android:text="Kick"
+            android:id="@+id/kick"
+            android:layout_gravity="left|bottom" />
+
+        <ImageButton
+            android:layout_width="292dp"
+            android:layout_height="196dp"
+            android:text="HiHat"
+            android:id="@+id/hihat"
+            android:layout_gravity="right|top" />
+
+        <ImageButton
+            android:layout_width="292dp"
+            android:layout_height="189dp"
+            android:text="Clap"
+            android:id="@+id/clap"
+            android:layout_gravity="right|bottom" />
+
     </FrameLayout>
 
 </FrameLayout>
