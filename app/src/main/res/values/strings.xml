@@ -8,4 +8,6 @@
     <string name="title_activity_piano">PianoActivity</string>
 
     <string name="title_activity_guitar">GuitarActivity</string>
+
+    <string name="title_activity_synth">Synth</string>
 </resources>
