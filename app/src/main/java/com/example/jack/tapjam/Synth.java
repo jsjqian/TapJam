@@ -48,7 +48,7 @@ public class Synth extends Activity {
 
     public void sound1(View v) {
 
-        String filename = "android.resource://" + this.getPackageName() + "/raw/n1";
+        String filename = "android.resource://" + this.getPackageName() + "/raw/f1";
         MediaPlayer mp = new MediaPlayer();
         try { mp.setDataSource(this,Uri.parse(filename)); } catch (Exception e) {}
         try { mp.prepare(); } catch (Exception e) {}
@@ -62,7 +62,7 @@ public class Synth extends Activity {
     }
 
     public void sound2(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n2);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -73,7 +73,7 @@ public class Synth extends Activity {
     }
 
     public void sound3(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n3);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -84,7 +84,7 @@ public class Synth extends Activity {
     }
 
     public void sound4(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n4);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -95,7 +95,7 @@ public class Synth extends Activity {
     }
 
     public void sound5(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n5);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -106,7 +106,7 @@ public class Synth extends Activity {
     }
 
     public void sound6(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n6);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -116,7 +116,7 @@ public class Synth extends Activity {
     }
 
     public void sound7(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n7);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -126,7 +126,7 @@ public class Synth extends Activity {
     }
 
     public void sound8(View v) {
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n7);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
