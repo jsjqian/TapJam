@@ -13,7 +13,81 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125">
-
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton4" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton5" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton6" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton7" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".125">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/imageButton8" />
         </LinearLayout>
 
     </LinearLayout>
