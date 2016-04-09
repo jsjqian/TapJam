@@ -42,7 +42,7 @@ public class DrumActivity extends Activity {
         snare.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.snare);
                     mp.start();
                     mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -59,7 +59,7 @@ public class DrumActivity extends Activity {
         hihat.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.hihat);
                     mp.start();
                     mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -76,7 +76,7 @@ public class DrumActivity extends Activity {
         kick.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.kick);
                     mp.start();
                     mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -93,7 +93,7 @@ public class DrumActivity extends Activity {
         clap.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clap);
                     mp.start();
                     mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
