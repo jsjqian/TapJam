@@ -1,15 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#0099cc"
+    android:layout_height="match_parent" android:background="#000000"
     tools:context="com.example.jack.tapjam.DrumActivity">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
-    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
-        android:textStyle="bold" android:textSize="50sp" android:gravity="center"
-        android:text="@string/dummy_content" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -22,36 +15,46 @@
             android:background="@color/black_overlay" android:orientation="horizontal"
             tools:ignore="UselessParent">
 
+            <ImageButton
+                android:layout_width="252dp"
+                android:layout_height="159dp"
+                android:text="Kick"
+                android:id="@+id/kick"
+                android:layout_gravity="left|bottom" />
+
         </LinearLayout>
 
         <ImageButton
-            android:layout_width="304dp"
-            android:layout_height="197dp"
+            android:layout_width="249dp"
+            android:layout_height="161dp"
             android:text="Snare"
             android:id="@+id/snare"
             android:layout_gravity="left|top" />
 
         <ImageButton
-            android:layout_width="305dp"
-            android:layout_height="193dp"
-            android:text="Kick"
-            android:id="@+id/kick"
-            android:layout_gravity="left|bottom" />
-
-        <ImageButton
-            android:layout_width="292dp"
-            android:layout_height="196dp"
+            android:layout_width="245dp"
+            android:layout_height="162dp"
             android:text="HiHat"
             android:id="@+id/hihat"
             android:layout_gravity="right|top" />
 
-        <ImageButton
-            android:layout_width="292dp"
-            android:layout_height="189dp"
-            android:text="Clap"
-            android:id="@+id/clap"
-            android:layout_gravity="right|bottom" />
+        <TextView
+            android:layout_width="54dp"
+            android:layout_height="270dp"
+            android:text="D\nR\nU\nM\nS\n"
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="45dp" />
+
 
     </FrameLayout>
+
+    <ImageButton
+        android:layout_width="240dp"
+        android:layout_height="155dp"
+        android:text="Clap"
+        android:id="@+id/clap"
+        android:layout_gravity="right|bottom" />
 
 </FrameLayout>
