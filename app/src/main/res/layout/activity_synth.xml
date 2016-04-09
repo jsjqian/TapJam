@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
-
+            android:id="@+id/L1"
              >
             <ImageButton
                 android:layout_width="match_parent"
@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L2"
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -42,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L3"
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -56,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L4"
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -70,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L5"
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -84,6 +88,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L6"
+
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -98,6 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+            android:id="@+id/L7"
             >
             <ImageButton
                 android:layout_width="match_parent"
@@ -112,7 +119,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
-           >
+            android:id="@+id/L8"
+            >
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="350dp"

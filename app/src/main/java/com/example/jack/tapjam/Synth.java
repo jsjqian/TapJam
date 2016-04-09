@@ -23,7 +23,7 @@ import android.widget.LinearLayout;
 public class Synth extends Activity {
 
     ImageButton b1, b2, b3, b4, b5, b6, b7, b8;
-    LinearLayout L;
+    LinearLayout L1, L2, L3, L4, L5, L6, L7, L8;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,132 +45,14 @@ public class Synth extends Activity {
         b7.setClickable(false);
         b8 = (ImageButton) findViewById(R.id.imageButton8);
         b8.setClickable(false);
-        L = (LinearLayout) findViewById(R.id.layout);
-
-        L.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event) {
-
-//                if (event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) {
-//                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
-//                    mp.start();
-//                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//                        public void onCompletion(MediaPlayer mp) {
-//                            mp.release();
-//                        }
-//                    });
-                int width = v.getWidth();
-//                int height = v.getHeight();
-                float x = event.getX();
-//                float y = event.getY();
-                if (x < (width / 8)) {
-                    sound1(v);
-                }
-                else if((width/8 < x) && (x < width/4)) {
-                    sound2(v);
-                }
-                else if(width/4 < x && x < 3*width/8) {
-                    sound3(v);
-                }
-                else if(3*width/8 < x && x < width/2) {
-                    sound4(v);
-                }
-                else if(width/2 < x && x < 5*width/8) {
-                    sound5(v);
-                }
-                else if(5*width/8 < x && x < 3*width/4) {
-                    sound6(v);
-                }
-                else if(3*width/4 < x && x < 7*width/8) {
-                    sound7(v);
-                }
-                else if(7*width/8 < x) {
-                    sound8(v);
-                }
-                return false;
-            }
-        });
-
-        L.setOnHoverListener(new View.OnHoverListener() {
-            @Override
-            public boolean onHover(View v, MotionEvent event) {
-                int width;
-                float x;
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_HOVER_ENTER:
-                        break;
-                    case MotionEvent.ACTION_HOVER_MOVE:
-                        int width = v.getWidth();
-//                int height = v.getHeight();
-                        float x = event.getX();
-//                float y = event.getY();
-                        String msg;
-                        width = v.getWidth();
-                        x = event.getX();
-                        if (x < width / 8) {
-                            sound1(v);
-                        } else if (width / 8 < x && x < width / 4) {
-                            sound2(v);
-                        } else if (width / 4 < x && x < 3 * width / 8) {
-                            sound3(v);
-                        } else if (3 * width / 8 < x && x < width / 2) {
-                            sound4(v);
-                        } else if (width / 2 < x && x < 5 * width / 8) {
-                            sound5(v);
-                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
-                            sound6(v);
-                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
-                            sound7(v);
-                        } else if (7 * width / 8 < x) {
-                            sound8(v);
-                        }
-                        break;
-                    case MotionEvent.ACTION_HOVER_MOVE:
-                        width = v.getWidth();
-                        x = event.getX();
-                        if (x < width / 8) {
-                            sound1(v);
-                        } else if (width / 8 < x && x < width / 4) {
-                            sound2(v);
-                        } else if (width / 4 < x && x < 3 * width / 8) {
-                            sound3(v);
-                        } else if (3 * width / 8 < x && x < width / 2) {
-                            sound4(v);
-                        } else if (width / 2 < x && x < 5 * width / 8) {
-                            sound5(v);
-                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
-                            sound6(v);
-                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
-                            sound7(v);
-                        } else if (7 * width / 8 < x) {
-                            sound8(v);
-                        }
-                        break;
-                    case MotionEvent.ACTION_HOVER_EXIT:
-                        width = v.getWidth();
-                        x = event.getX();
-                        if (x < width / 8) {
-                            sound1(v);
-                        } else if (width / 8 < x && x < width / 4) {
-                            sound2(v);
-                        } else if (width / 4 < x && x < 3 * width / 8) {
-                            sound3(v);
-                        } else if (3 * width / 8 < x && x < width / 2) {
-                            sound4(v);
-                        } else if (width / 2 < x && x < 5 * width / 8) {
-                            sound5(v);
-                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
-                            sound6(v);
-                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
-                            sound7(v);
-                        } else if (7 * width / 8 < x) {
-                            sound8(v);
-                        }
-                        break;
-                }
-                return false;
-            }
-        });
-
+        L1 = (LinearLayout) findViewById(R.id.L1);
+        L2 = (LinearLayout) findViewById(R.id.L2);
+        L3 = (LinearLayout) findViewById(R.id.L3);
+        L4 = (LinearLayout) findViewById(R.id.L4);
+        L5 = (LinearLayout) findViewById(R.id.L5);
+        L6 = (LinearLayout) findViewById(R.id.L6);
+        L7 = (LinearLayout) findViewById(R.id.L7);
+        L8 = (LinearLayout) findViewById(R.id.L8);
 
     }
 
@@ -179,7 +61,28 @@ public class Synth extends Activity {
         View v = (LinearLayout) findViewById(R.id.layout);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-
+                int width = v.getWidth();
+//                int height = v.getHeight();
+                float x = event.getX();
+//                float y = event.getY();
+                String msg;
+                if (x < width / 8) {
+                    sound1(v);
+                } else if (width / 8 < x && x < width / 4) {
+                    sound2(v);
+                } else if (width / 4 < x && x < 3 * width / 8) {
+                    sound3(v);
+                } else if (3 * width / 8 < x && x < width / 2) {
+                    sound4(v);
+                } else if (width / 2 < x && x < 5 * width / 8) {
+                    sound5(v);
+                } else if (5 * width / 8 < x && x < 3 * width / 4) {
+                    sound6(v);
+                } else if (3 * width / 4 < x && x < 7 * width / 8) {
+                    sound7(v);
+                } else if (7 * width / 8 < x) {
+                    sound8(v);
+                }
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
@@ -216,87 +119,104 @@ public class Synth extends Activity {
     }
 
     public void sound1(View v) {
-
+        L1.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L1.setPressed(false);
             }
         });
 
     }
 
     public void sound2(View v) {
+        L2.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L2.setPressed(false);
+
             }
         });
 
     }
 
     public void sound3(View v) {
+        L3.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L3.setPressed(false);
             }
         });
 
     }
 
     public void sound4(View v) {
+        L4.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L4.setPressed(false);
             }
         });
 
     }
 
     public void sound5(View v) {
+        L5.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L5.setPressed(false);
             }
         });
 
     }
 
     public void sound6(View v) {
+        L6.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L6.setPressed(false);
             }
         });
     }
 
     public void sound7(View v) {
+        L7.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L7.setPressed(false);
+
             }
         });
     }
 
     public void sound8(View v) {
+        L8.setPressed(true);
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
                 mp.release();
+                L8.setPressed(false);
             }
         });
     }
