@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TapJam</string>
+
+    <string name="title_activity_drum">DrumActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_piano">PianoActivity</string>
+
+    <string name="title_activity_guitar">GuitarActivity</string>
 </resources>

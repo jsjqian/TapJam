@@ -15,6 +15,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateSessionActivity" >
+        </activity>
+        <activity android:name=".PickInstrumentActivity" >
+        </activity>
+        <activity
+            android:name=".DrumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_drum"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name=".PianoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_piano"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name=".GuitarActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_guitar"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
     </application>
 
 </manifest>
