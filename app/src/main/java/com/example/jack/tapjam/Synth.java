@@ -93,43 +93,71 @@ public class Synth extends Activity {
         L.setOnHoverListener(new View.OnHoverListener() {
             @Override
             public boolean onHover(View v, MotionEvent event) {
+                int width;
+                float x;
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_HOVER_ENTER:
-                        int width = v.getWidth();
-//                int height = v.getHeight();
-                        float x = event.getX();
-//                float y = event.getY();
-                        String msg;
+                        width = v.getWidth();
+                        x = event.getX();
                         if (x < width / 8) {
                             sound1(v);
-                        }
-                        else if(width/8 < x && x < width/4) {
+                        } else if (width / 8 < x && x < width / 4) {
                             sound2(v);
-                        }
-                        else if(width/4 < x && x < 3*width/8) {
+                        } else if (width / 4 < x && x < 3 * width / 8) {
                             sound3(v);
-                        }
-                        else if(3*width/8 < x && x < width/2) {
+                        } else if (3 * width / 8 < x && x < width / 2) {
                             sound4(v);
-                        }
-                        else if(width/2 < x && x < 5*width/8) {
+                        } else if (width / 2 < x && x < 5 * width / 8) {
                             sound5(v);
-                        }
-                        else if(5*width/8 < x && x < 3*width/4) {
+                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
                             sound6(v);
-                        }
-                        else if(3*width/4 < x && x < 7*width/8) {
+                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
                             sound7(v);
-                        }
-                        else if(7*width/8 < x) {
+                        } else if (7 * width / 8 < x) {
                             sound8(v);
                         }
                         break;
                     case MotionEvent.ACTION_HOVER_MOVE:
-
+                        width = v.getWidth();
+                        x = event.getX();
+                        if (x < width / 8) {
+                            sound1(v);
+                        } else if (width / 8 < x && x < width / 4) {
+                            sound2(v);
+                        } else if (width / 4 < x && x < 3 * width / 8) {
+                            sound3(v);
+                        } else if (3 * width / 8 < x && x < width / 2) {
+                            sound4(v);
+                        } else if (width / 2 < x && x < 5 * width / 8) {
+                            sound5(v);
+                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
+                            sound6(v);
+                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
+                            sound7(v);
+                        } else if (7 * width / 8 < x) {
+                            sound8(v);
+                        }
                         break;
                     case MotionEvent.ACTION_HOVER_EXIT:
-
+                        width = v.getWidth();
+                        x = event.getX();
+                        if (x < width / 8) {
+                            sound1(v);
+                        } else if (width / 8 < x && x < width / 4) {
+                            sound2(v);
+                        } else if (width / 4 < x && x < 3 * width / 8) {
+                            sound3(v);
+                        } else if (3 * width / 8 < x && x < width / 2) {
+                            sound4(v);
+                        } else if (width / 2 < x && x < 5 * width / 8) {
+                            sound5(v);
+                        } else if (5 * width / 8 < x && x < 3 * width / 4) {
+                            sound6(v);
+                        } else if (3 * width / 4 < x && x < 7 * width / 8) {
+                            sound7(v);
+                        } else if (7 * width / 8 < x) {
+                            sound8(v);
+                        }
                         break;
                 }
                 return false;

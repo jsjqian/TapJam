@@ -39,84 +39,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound3">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton3"
-                android:onClick="sound3"
                 android:duplicateParentState="true"
                 android:background="@drawable/b3"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound4">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton4"
-                android:onClick="sound4"
                 android:duplicateParentState="true"
                 android:background="@drawable/b4"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound5">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton5"
-                android:onClick="sound5"
                 android:duplicateParentState="true"
                 android:background="@drawable/b5"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound6">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="270dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton6"
-                android:onClick="sound6"
                 android:duplicateParentState="true"
                 android:background="@drawable/b6"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound7">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton7"
-                android:onClick="sound7"
                 android:duplicateParentState="true"
                 android:background="@drawable/b7"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".125"
-            android:onClick="sound8">
+            android:layout_weight=".125">
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton8"
-                android:onClick="sound8"
                 android:duplicateParentState="true"
                 android:background="@drawable/b8"/>
         </LinearLayout>
