@@ -12,7 +12,7 @@
         <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay" android:orientation="horizontal"
+            android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <ImageButton
@@ -38,14 +38,13 @@
             android:id="@+id/hihat"
             android:layout_gravity="right|top" />
 
-        <TextView
-            android:layout_width="54dp"
-            android:layout_height="270dp"
-            android:text="D\nR\nU\nM\nS\n"
-            android:id="@+id/textView"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:textSize="45dp" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metronome"
+            android:id="@+id/metronome"
+            android:layout_gravity="center" />
 
 
     </FrameLayout>
