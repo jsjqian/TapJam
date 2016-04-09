@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -18,7 +20,6 @@ import android.widget.ImageButton;
  * status bar and navigation/system bar) with user interaction.
  */
 public class Synth extends Activity {
-
 
     ImageButton b1, b2, b3, b4, b5, b6, b7, b8;
 
@@ -45,60 +46,93 @@ public class Synth extends Activity {
         b8.setClickable(false);
     }
 
-
-
     public void sound1(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n1);
-        m.start();
+
+        String filename = "android.resource://" + this.getPackageName() + "/raw/n1";
+        MediaPlayer mp = new MediaPlayer();
+        try { mp.setDataSource(this,Uri.parse(filename)); } catch (Exception e) {}
+        try { mp.prepare(); } catch (Exception e) {}
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
     }
 
     public void sound2(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n2);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n2);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
-        m.start();
     }
 
     public void sound3(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n3);
-
-        m.start();
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n3);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
     }
 
     public void sound4(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n4);
-
-        m.start();
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n4);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
     }
 
     public void sound5(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n5);
-
-        m.start();
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n5);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
 
     }
 
     public void sound6(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n6);
-
-        m.start();
-
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n6);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
     }
 
     public void sound7(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n7);
-
-        m.start();
-
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n7);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
     }
 
     public void sound8(View v) {
-        MediaPlayer m = MediaPlayer.create(getApplicationContext(), R.raw.n7);
-
-        m.start();
-
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n7);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                mp.release();
+            }
+        });
     }
 
 }
