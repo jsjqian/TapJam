@@ -1,19 +1,12 @@
 package com.example.jack.tapjam;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.media.MediaPlayer;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -56,33 +49,12 @@ public class Synth extends Activity {
 
     }
 
+
     public boolean onTouchEvent(MotionEvent event) {
         super.onTouchEvent(event);
         View v = (LinearLayout) findViewById(R.id.layout);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                int width = v.getWidth();
-//                int height = v.getHeight();
-                float x = event.getX();
-//                float y = event.getY();
-                String msg;
-                if (x < width / 8) {
-                    sound1(v);
-                } else if (width / 8 < x && x < width / 4) {
-                    sound2(v);
-                } else if (width / 4 < x && x < 3 * width / 8) {
-                    sound3(v);
-                } else if (3 * width / 8 < x && x < width / 2) {
-                    sound4(v);
-                } else if (width / 2 < x && x < 5 * width / 8) {
-                    sound5(v);
-                } else if (5 * width / 8 < x && x < 3 * width / 4) {
-                    sound6(v);
-                } else if (3 * width / 4 < x && x < 7 * width / 8) {
-                    sound7(v);
-                } else if (7 * width / 8 < x) {
-                    sound8(v);
-                }
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
@@ -114,11 +86,6 @@ public class Synth extends Activity {
 
                 break;
             }
-        }
-        try {
-            Thread.sleep(75);
-        } catch (Exception e){
-
         }
         return true;
     }
