@@ -16,7 +16,7 @@
         android:id="@+id/synth"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="154dp"
+        android:layout_marginTop="164dp"
         android:textSize="50dp"
         android:background="#EC9F05"
         android:textColor="#BF3100" />
@@ -28,9 +28,19 @@
         android:id="@+id/drum"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="127dp"
         android:layout_below="@id/synth"
         android:textSize="50dp"
         android:background="#EC9F05"
         android:textColor="#BF3100" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#BF3100" />
+
 </RelativeLayout>
