@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".125"
+
              >
             <ImageButton
                 android:layout_width="match_parent"
@@ -20,7 +21,8 @@
                 android:layout_gravity="center_vertical"
                 android:id="@+id/imageButton1"
                 android:duplicateParentState="true"
-                android:background="@drawable/b1" />
+                android:background="@drawable/b1"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
