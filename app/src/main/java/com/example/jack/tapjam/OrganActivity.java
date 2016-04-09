@@ -2,18 +2,14 @@ package com.example.jack.tapjam;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
-public class Synth extends Activity {
+public class OrganActivity extends Activity {
 
     ImageButton b1, b2, b3, b4, b5, b6, b7, b8;
     LinearLayout L1, L2, L3, L4, L5, L6, L7, L8;
@@ -21,7 +17,7 @@ public class Synth extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_synth);
+        setContentView(R.layout.activity_organ);
         b1 = (ImageButton) findViewById(R.id.imageButton1);
         b1.setClickable(false);
         b2 = (ImageButton) findViewById(R.id.imageButton2);
@@ -92,7 +88,7 @@ public class Synth extends Activity {
 
     public void sound1(View v) {
         L1.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o1);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -105,7 +101,7 @@ public class Synth extends Activity {
 
     public void sound2(View v) {
         L2.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o2);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -119,7 +115,7 @@ public class Synth extends Activity {
 
     public void sound3(View v) {
         L3.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o3);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -132,7 +128,7 @@ public class Synth extends Activity {
 
     public void sound4(View v) {
         L4.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o4);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -145,7 +141,7 @@ public class Synth extends Activity {
 
     public void sound5(View v) {
         L5.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o5);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -158,7 +154,7 @@ public class Synth extends Activity {
 
     public void sound6(View v) {
         L6.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o6);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -170,7 +166,7 @@ public class Synth extends Activity {
 
     public void sound7(View v) {
         L7.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -183,7 +179,7 @@ public class Synth extends Activity {
 
     public void sound8(View v) {
         L8.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f8);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.o8);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -192,5 +188,4 @@ public class Synth extends Activity {
             }
         });
     }
-
 }
