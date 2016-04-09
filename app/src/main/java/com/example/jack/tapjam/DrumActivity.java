@@ -20,11 +20,6 @@ public class DrumActivity extends Activity {
     private ImageButton kick;
     private ImageButton clap;
 
-    MediaPlayer snare_sound;
-    MediaPlayer hihat_sound;
-    MediaPlayer kick_sound;
-    MediaPlayer clap_sound;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +27,11 @@ public class DrumActivity extends Activity {
 
         setContentView(R.layout.activity_drum);
 
-
-
         snare = (ImageButton) findViewById(R.id.snare);
         hihat = (ImageButton) findViewById(R.id.hihat);
         kick = (ImageButton) findViewById(R.id.kick);
         clap = (ImageButton) findViewById(R.id.clap);
 
-
-//        clap_sound = MediaPlayer.create(getApplicationContext(), R.raw.clap);
-//        kick_sound = MediaPlayer.create(getApplicationContext(), R.raw.kick);
-//        hihat_sound = MediaPlayer.create(getApplicationContext(), R.raw.hihat);
-//        snare_sound = MediaPlayer.create(getApplicationContext(), R.raw.snare);
-
-//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.n3);
-//        mp.start();
-//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//            public void onCompletion(MediaPlayer mp) {
-//                mp.release();
-//            }
-//        });
 
         snare.setOnClickListener(new View.OnClickListener() {
             @Override
