@@ -62,11 +62,10 @@ public class Synth extends Activity {
 //                int height = v.getHeight();
                 float x = event.getX();
 //                float y = event.getY();
-                String msg;
-                if (x < width / 8) {
+                if (x < (width / 8)) {
                     sound1(v);
                 }
-                else if(width/8 < x && x < width/4) {
+                else if((width/8 < x) && (x < width/4)) {
                     sound2(v);
                 }
                 else if(width/4 < x && x < 3*width/8) {
