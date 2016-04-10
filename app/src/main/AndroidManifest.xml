@@ -10,7 +10,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:screenOrientation="sensorLandscape">
         <service android:name=".GetSounds"
             android:enabled="true">
         </service>
@@ -43,6 +44,12 @@
             android:name=".Synth"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_synth"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".Synth2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="+@string/title_activity_synth2"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
