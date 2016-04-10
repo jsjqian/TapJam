@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jack.tapjam" >
+    package="com.example.jack.tapjam">
+
+    <!--ADDED TO ALLOW INTERNET PERMISSION FOR APP-->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/tapjam_logo"
+        android:icon="@drawable/tapjam_logo_final"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:screenOrientation="sensorLandscape">
+        <service android:name=".GetSounds"
+            android:enabled="true">
+        </service>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".CreateSessionActivity"
             android:screenOrientation="portrait"
@@ -31,7 +37,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_drum"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
         </activity>
         <activity
             android:name=".Synth"
@@ -40,18 +47,12 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".OrganActivity"
+            android:name=".Synth2"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="+@string/title_activity_synth2"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
-        </activity>
-        <activity android:name=".SteelDrumActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-
-        </activity>
     </application>
 
 </manifest>

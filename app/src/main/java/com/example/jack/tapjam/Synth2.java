@@ -4,21 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Synth extends Activity{
+public class Synth2 extends Activity {
 
     ImageButton b1, b2, b3, b4, b5, b6, b7, b8;
     LinearLayout L1, L2, L3, L4, L5, L6, L7, L8;
@@ -26,7 +22,6 @@ public class Synth extends Activity{
     private float x2 = 0;
     private float y1 = 0;
     private float y2 = 0;
-   // private GestureDetectorCompat mDetector;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,17 +32,16 @@ public class Synth extends Activity{
         }catch (NullPointerException e){
             condition = 0;
         }
-            System.out.println(condition);
-            if (condition < 0){
-                overridePendingTransition(R.anim.slide_in1, R.anim.slide_out1);
-            }
-            else {
-                overridePendingTransition(R.anim.slide_out2, R.anim.slide_in2);
-            }
+        System.out.println(condition);
 
+        if (condition < 0){
+            overridePendingTransition(R.anim.slide_in1, R.anim.slide_out1);
+        }
+        else {
+            overridePendingTransition(R.anim.slide_out2, R.anim.slide_in2);
+        }
 
-
-        setContentView(R.layout.activity_synth);
+        setContentView(R.layout.activity_synth2);
         b1 = (ImageButton) findViewById(R.id.imageButton1);
         b1.setClickable(false);
         b2 = (ImageButton) findViewById(R.id.imageButton2);
@@ -72,72 +66,8 @@ public class Synth extends Activity{
         L6 = (LinearLayout) findViewById(R.id.L6);
         L7 = (LinearLayout) findViewById(R.id.L7);
         L8 = (LinearLayout) findViewById(R.id.L8);
-        //detector = new GestureDetector(this, this);
-  //      mDetector =  new GestureDetectorCompat(this, new MyGestureListener());
 
     }
-
-//    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
-//        private static final String DEBUG_TAG = "Gestures";
-//        View v = findViewById(R.id.layout);
-//        @Override
-//        public boolean onFling(MotionEvent event1, MotionEvent event2,
-//                               float velocityX, float velocityY) {
-
-//            return true;
-//        }
-//        public boolean onDown(MotionEvent event){
-//            int width = v.getWidth();
-////                int height = v.getHeight();
-//            float x = event.getX();
-////                float y = event.getY();
-//            String msg;
-//            if (x < width / 8) {
-//                sound1(v);
-//            } else if (width / 8 < x && x < width / 4) {
-//                sound2(v);
-//            } else if (width / 4 < x && x < 3 * width / 8) {
-//                sound3(v);
-//            } else if (3 * width / 8 < x && x < width / 2) {
-//                sound4(v);
-//            } else if (width / 2 < x && x < 5 * width / 8) {
-//                sound5(v);
-//            } else if (5 * width / 8 < x && x < 3 * width / 4) {
-//                sound6(v);
-//            } else if (3 * width / 4 < x && x < 7 * width / 8) {
-//                sound7(v);
-//            } else if (7 * width / 8 < x) {
-//                sound8(v);
-//            }
-//            return true;
-//        }
-//        public void onLongPress(MotionEvent event) {
-//            int width = v.getWidth();
-////                int height = v.getHeight();
-//            float x = event.getX();
-////                float y = event.getY();
-//            String msg;
-//            if (x < width / 8) {
-//                sound1(v);
-//            } else if (width / 8 < x && x < width / 4) {
-//                sound2(v);
-//            } else if (width / 4 < x && x < 3 * width / 8) {
-//                sound3(v);
-//            } else if (3 * width / 8 < x && x < width / 2) {
-//                sound4(v);
-//            } else if (width / 2 < x && x < 5 * width / 8) {
-//                sound5(v);
-//            } else if (5 * width / 8 < x && x < 3 * width / 4) {
-//                sound6(v);
-//            } else if (3 * width / 4 < x && x < 7 * width / 8) {
-//                sound7(v);
-//            } else if (7 * width / 8 < x) {
-//                sound8(v);
-//            }
-//
-//        }
-//
-//    }
 
     public boolean onTouchEvent(MotionEvent event) {
         super.onTouchEvent(event);
@@ -199,29 +129,13 @@ public class Synth extends Activity{
                 x2 = event.getX();
                 y2 = event.getY();
                 if (Math.abs(y2 - y1) > 300) {
-//                    new Handler().postDelayed(new Runnable() {
-//                        public void run() {
-
-                     /* Create an intent that will start the main activity. */
-                            Intent mainIntent = new Intent(getApplicationContext(), Synth2.class);
+                    Intent mainIntent = new Intent(getApplicationContext(), Synth.class);
+//                            mainIntent.putExtra("id", "1");
                     int test = (int)(y2-y1);
                     mainIntent.putExtra("transition", test);
-//                            mainIntent.putExtra("id", "1");
-
-                            //SplashScreen.this.startActivity(mainIntent);
-                            startActivity(mainIntent);
-                     /* Finish splash activity so user cant go back to it. */
-//                SplashScreen.this.finish();
-
-                     /* Apply our splash exit (fade out) and main
-                        entry (fade in) animation transitions. */
-//                            overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
-//                        }
-//                    }, 200);
+                    //SplashScreen.this.startActivity(mainIntent);
+                    startActivity(mainIntent);
                 }
-//
-//                getApplicationContext().
-//                Toast.makeText(getApplicationContext(), "" + x2 + "" + y2, Toast.LENGTH_LONG);
                 break;
             }
         }
@@ -230,7 +144,7 @@ public class Synth extends Activity{
 
     public void sound1(View v) {
         L1.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano1);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -243,7 +157,7 @@ public class Synth extends Activity{
 
     public void sound2(View v) {
         L2.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano2);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -257,7 +171,7 @@ public class Synth extends Activity{
 
     public void sound3(View v) {
         L3.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano3);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -270,7 +184,7 @@ public class Synth extends Activity{
 
     public void sound4(View v) {
         L4.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano4);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -283,7 +197,7 @@ public class Synth extends Activity{
 
     public void sound5(View v) {
         L5.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano5);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -296,7 +210,7 @@ public class Synth extends Activity{
 
     public void sound6(View v) {
         L6.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano6);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -308,7 +222,7 @@ public class Synth extends Activity{
 
     public void sound7(View v) {
         L7.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano7);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -321,7 +235,7 @@ public class Synth extends Activity{
 
     public void sound8(View v) {
         L8.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.piano8);
         mp.start();
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             public void onCompletion(MediaPlayer mp) {
@@ -329,62 +243,6 @@ public class Synth extends Activity{
                 L8.setPressed(false);
             }
         });
-
     }
-//
-//    @Override
-//    public boolean onDown(MotionEvent e) {
-//        return false;
-//    }
-//
-//    @Override
-//    public void onShowPress(MotionEvent e) {
-//
-//    }
-//
-//    @Override
-//    public boolean onSingleTapUp(MotionEvent e) {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-//            new Handler().postDelayed(new Runnable() {
-//                public void run() {
-//
-//                     /* Create an intent that will start the main activity. */
-//                    Intent mainIntent = new Intent(getApplicationContext(), Synth2.class);
-//                    mainIntent.putExtra("id", "1");
-//
-//                    //SplashScreen.this.startActivity(mainIntent);
-//                    startActivity(mainIntent);
-//                     /* Finish splash activity so user cant go back to it. */
-////                SplashScreen.this.finish();
-//
-//                     /* Apply our splash exit (fade out) and main
-//                        entry (fade in) animation transitions. */
-//                    overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
-//                }
-//            }, 200);
-//            return true;
-//        }
-//
-//
-//    @Override
-//    public void onLongPress(MotionEvent e) {
-//
-//    }
-//
-//    @Override
-//    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//        Log.d("INFLING", "True");
-//        if(e2.getX() - e1.getX() < 10){
-//            if(e2.getY() < 30 && e1.getY() < 30){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
 
 }
