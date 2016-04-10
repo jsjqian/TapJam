@@ -26,12 +26,12 @@
         android:layout_height="wrap_content"
         android:text="Join Session"
         android:id="@+id/join"
-        android:layout_below="@+id/create"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="161dp"
+        android:layout_marginTop="93dp"
         android:background="#F5BB00"
         android:textSize="50dp"
-        android:textColor="#BF3100" />
+        android:textColor="#BF3100"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="300dp"
@@ -41,4 +41,5 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="#BF3100" />
+
 </RelativeLayout>

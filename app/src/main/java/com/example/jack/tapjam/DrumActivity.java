@@ -15,8 +15,7 @@ import android.widget.ImageButton;
  * status bar and navigation/system bar) with user interaction.
  */
 public class DrumActivity extends Activity {
-
-
+    
     private ImageButton snare;
     private ImageButton hihat;
     private ImageButton kick;

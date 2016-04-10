@@ -26,26 +26,21 @@ public class Synth extends Activity{
     private float x2 = 0;
     private float y1 = 0;
     private float y2 = 0;
-   // private GestureDetectorCompat mDetector;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int condition;
         try {
             condition = getIntent().getIntExtra("transition", 0);
-//            condition = getIntent().getExtras().getInt("transition");
         }catch (NullPointerException e){
             condition = 0;
         }
-            System.out.println(condition);
             if (condition < 0){
                 overridePendingTransition(R.anim.slide_in1, R.anim.slide_out1);
             }
             else {
                 overridePendingTransition(R.anim.slide_out2, R.anim.slide_in2);
             }
-
-
 
         setContentView(R.layout.activity_synth);
         b1 = (ImageButton) findViewById(R.id.imageButton1);
@@ -72,72 +67,9 @@ public class Synth extends Activity{
         L6 = (LinearLayout) findViewById(R.id.L6);
         L7 = (LinearLayout) findViewById(R.id.L7);
         L8 = (LinearLayout) findViewById(R.id.L8);
-        //detector = new GestureDetector(this, this);
-  //      mDetector =  new GestureDetectorCompat(this, new MyGestureListener());
+
 
     }
-
-//    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
-//        private static final String DEBUG_TAG = "Gestures";
-//        View v = findViewById(R.id.layout);
-//        @Override
-//        public boolean onFling(MotionEvent event1, MotionEvent event2,
-//                               float velocityX, float velocityY) {
-
-//            return true;
-//        }
-//        public boolean onDown(MotionEvent event){
-//            int width = v.getWidth();
-////                int height = v.getHeight();
-//            float x = event.getX();
-////                float y = event.getY();
-//            String msg;
-//            if (x < width / 8) {
-//                sound1(v);
-//            } else if (width / 8 < x && x < width / 4) {
-//                sound2(v);
-//            } else if (width / 4 < x && x < 3 * width / 8) {
-//                sound3(v);
-//            } else if (3 * width / 8 < x && x < width / 2) {
-//                sound4(v);
-//            } else if (width / 2 < x && x < 5 * width / 8) {
-//                sound5(v);
-//            } else if (5 * width / 8 < x && x < 3 * width / 4) {
-//                sound6(v);
-//            } else if (3 * width / 4 < x && x < 7 * width / 8) {
-//                sound7(v);
-//            } else if (7 * width / 8 < x) {
-//                sound8(v);
-//            }
-//            return true;
-//        }
-//        public void onLongPress(MotionEvent event) {
-//            int width = v.getWidth();
-////                int height = v.getHeight();
-//            float x = event.getX();
-////                float y = event.getY();
-//            String msg;
-//            if (x < width / 8) {
-//                sound1(v);
-//            } else if (width / 8 < x && x < width / 4) {
-//                sound2(v);
-//            } else if (width / 4 < x && x < 3 * width / 8) {
-//                sound3(v);
-//            } else if (3 * width / 8 < x && x < width / 2) {
-//                sound4(v);
-//            } else if (width / 2 < x && x < 5 * width / 8) {
-//                sound5(v);
-//            } else if (5 * width / 8 < x && x < 3 * width / 4) {
-//                sound6(v);
-//            } else if (3 * width / 4 < x && x < 7 * width / 8) {
-//                sound7(v);
-//            } else if (7 * width / 8 < x) {
-//                sound8(v);
-//            }
-//
-//        }
-//
-//    }
 
     public boolean onTouchEvent(MotionEvent event) {
         super.onTouchEvent(event);
@@ -147,9 +79,7 @@ public class Synth extends Activity{
                 x1 = event.getX();
                 y1 = event.getY();
                 int width = v.getWidth();
-//                int height = v.getHeight();
                 float x = event.getX();
-//                float y = event.getY();
                 String msg;
                 if (x < width / 8) {
                     sound1(v);
@@ -172,9 +102,7 @@ public class Synth extends Activity{
             }
             case MotionEvent.ACTION_MOVE: {
                 int width = v.getWidth();
-//                int height = v.getHeight();
                 float x = event.getX();
-//                float y = event.getY();
                 String msg;
                 if (x < width / 8) {
                     sound1(v);
@@ -199,29 +127,14 @@ public class Synth extends Activity{
                 x2 = event.getX();
                 y2 = event.getY();
                 if (Math.abs(y2 - y1) > 300) {
-//                    new Handler().postDelayed(new Runnable() {
-//                        public void run() {
 
-                     /* Create an intent that will start the main activity. */
-                            Intent mainIntent = new Intent(getApplicationContext(), Synth2.class);
+                    Intent mainIntent = new Intent(getApplicationContext(), Synth2.class);
                     int test = (int)(y2-y1);
                     mainIntent.putExtra("transition", test);
-//                            mainIntent.putExtra("id", "1");
 
-                            //SplashScreen.this.startActivity(mainIntent);
-                            startActivity(mainIntent);
-                     /* Finish splash activity so user cant go back to it. */
-//                SplashScreen.this.finish();
+                    startActivity(mainIntent);
 
-                     /* Apply our splash exit (fade out) and main
-                        entry (fade in) animation transitions. */
-//                            overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
-//                        }
-//                    }, 200);
                 }
-//
-//                getApplicationContext().
-//                Toast.makeText(getApplicationContext(), "" + x2 + "" + y2, Toast.LENGTH_LONG);
                 break;
             }
         }
@@ -331,60 +244,6 @@ public class Synth extends Activity{
         });
 
     }
-//
-//    @Override
-//    public boolean onDown(MotionEvent e) {
-//        return false;
-//    }
-//
-//    @Override
-//    public void onShowPress(MotionEvent e) {
-//
-//    }
-//
-//    @Override
-//    public boolean onSingleTapUp(MotionEvent e) {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-//            new Handler().postDelayed(new Runnable() {
-//                public void run() {
-//
-//                     /* Create an intent that will start the main activity. */
-//                    Intent mainIntent = new Intent(getApplicationContext(), Synth2.class);
-//                    mainIntent.putExtra("id", "1");
-//
-//                    //SplashScreen.this.startActivity(mainIntent);
-//                    startActivity(mainIntent);
-//                     /* Finish splash activity so user cant go back to it. */
-////                SplashScreen.this.finish();
-//
-//                     /* Apply our splash exit (fade out) and main
-//                        entry (fade in) animation transitions. */
-//                    overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
-//                }
-//            }, 200);
-//            return true;
-//        }
-//
-//
-//    @Override
-//    public void onLongPress(MotionEvent e) {
-//
-//    }
-//
-//    @Override
-//    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//        Log.d("INFLING", "True");
-//        if(e2.getX() - e1.getX() < 10){
-//            if(e2.getY() < 30 && e1.getY() < 30){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
 
 
 }
