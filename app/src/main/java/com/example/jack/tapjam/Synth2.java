@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Synth extends Activity {
+public class Synth2 extends Activity {
 
     ImageButton b1, b2, b3, b4, b5, b6, b7, b8;
     LinearLayout L1, L2, L3, L4, L5, L6, L7, L8;
@@ -21,7 +21,7 @@ public class Synth extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_synth);
+        setContentView(R.layout.activity_synth2);
         b1 = (ImageButton) findViewById(R.id.imageButton1);
         b1.setClickable(false);
         b2 = (ImageButton) findViewById(R.id.imageButton2);
