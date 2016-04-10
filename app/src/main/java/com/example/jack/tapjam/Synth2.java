@@ -34,7 +34,7 @@ public class Synth2 extends Activity {
         }
         System.out.println(condition);
 
-        if (condition > 0){
+        if (condition < 0){
             overridePendingTransition(R.anim.slide_in1, R.anim.slide_out1);
         }
         else {
@@ -131,9 +131,8 @@ public class Synth2 extends Activity {
                 if (Math.abs(y2 - y1) > 300) {
                     Intent mainIntent = new Intent(getApplicationContext(), Synth.class);
 //                            mainIntent.putExtra("id", "1");
-                    mainIntent.putExtra("transition", ((int)y2-y1));
-
-
+                    int test = (int)(y2-y1);
+                    mainIntent.putExtra("transition", test);
                     //SplashScreen.this.startActivity(mainIntent);
                     startActivity(mainIntent);
                 }
