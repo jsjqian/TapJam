@@ -28,11 +28,9 @@ public class Synth2 extends Activity {
         int condition;
         try {
             condition = getIntent().getIntExtra("transition", 0);
-//            condition = getIntent().getExtras().getInt("transition");
         }catch (NullPointerException e){
             condition = 0;
         }
-        System.out.println(condition);
 
         if (condition < 0){
             overridePendingTransition(R.anim.slide_in1, R.anim.slide_out1);
@@ -77,9 +75,7 @@ public class Synth2 extends Activity {
                 x1 = event.getX();
                 y1 = event.getY();
                 int width = v.getWidth();
-//                int height = v.getHeight();
                 float x = event.getX();
-//                float y = event.getY();
                 String msg;
                 if (x < width / 8) {
                     sound1(v);
@@ -102,9 +98,7 @@ public class Synth2 extends Activity {
             }
             case MotionEvent.ACTION_MOVE: {
                 int width = v.getWidth();
-//                int height = v.getHeight();
                 float x = event.getX();
-//                float y = event.getY();
                 String msg;
                 if (x < width / 8) {
                     sound1(v);
@@ -130,10 +124,8 @@ public class Synth2 extends Activity {
                 y2 = event.getY();
                 if (Math.abs(y2 - y1) > 300) {
                     Intent mainIntent = new Intent(getApplicationContext(), Synth.class);
-//                            mainIntent.putExtra("id", "1");
                     int test = (int)(y2-y1);
                     mainIntent.putExtra("transition", test);
-                    //SplashScreen.this.startActivity(mainIntent);
                     startActivity(mainIntent);
                 }
                 break;

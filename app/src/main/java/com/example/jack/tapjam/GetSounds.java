@@ -15,7 +15,6 @@ import microsoft.aspnet.signalr.client.hubs.HubProxy;
  */
 public class GetSounds extends Service {
 
-
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
