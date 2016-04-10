@@ -1,11 +1,15 @@
 package com.example.jack.tapjam;
 
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
+import java.util.concurrent.ExecutionException;
+
 import microsoft.aspnet.signalr.client.Platform;
+import microsoft.aspnet.signalr.client.SignalRFuture;
 import microsoft.aspnet.signalr.client.http.android.AndroidPlatformComponent;
 import microsoft.aspnet.signalr.client.hubs.HubConnection;
 import microsoft.aspnet.signalr.client.hubs.HubProxy;
@@ -16,7 +20,8 @@ import microsoft.aspnet.signalr.client.hubs.HubProxy;
 public class GetSounds extends Service {
 
     @Nullable
-    @Override
+    static HubConnection connection;
+    static HubProxy hub;
     public IBinder onBind(Intent intent) {
         return null;
     }
@@ -29,9 +34,18 @@ public class GetSounds extends Service {
     private void handleCommand(Intent intent) {
         Platform.loadPlatformComponent(new AndroidPlatformComponent());
 // Change to the IP address and matching port of your SignalR server.
-        String host = "http://192.168.0.xxx:8080";
-        HubConnection connection = new HubConnection( host );
-        HubProxy hub = connection.createHubProxy( "ChatHub" );
+        String host = "http://tapjam2016.azurewebsites.net/";
+        connection = new HubConnection( host );
+        hub = connection.createHubProxy( "ChatHub" );
+        SignalRFuture<Void> awaitConnection = connection.start();
+        try {
+            awaitConnection.get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+
     }
 
 

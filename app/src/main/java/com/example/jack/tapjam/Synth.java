@@ -13,6 +13,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.util.concurrent.ExecutionException;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -143,105 +145,161 @@ public class Synth extends Activity{
 
     public void sound1(View v) {
         L1.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 11).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L1.setPressed(false);
-            }
-        });
+//            }
+//        });
 
     }
 
     public void sound2(View v) {
         L2.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 12).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f2);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L2.setPressed(false);
-
-            }
-        });
+//
+//            }
+//        });
 
     }
 
     public void sound3(View v) {
         L3.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 13).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f3);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L3.setPressed(false);
-            }
-        });
+//            }
+//        });
 
     }
 
     public void sound4(View v) {
         L4.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 14).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f4);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L4.setPressed(false);
-            }
-        });
+//            }
+//        });
 
     }
 
     public void sound5(View v) {
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 15).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
         L5.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f5);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L5.setPressed(false);
-            }
-        });
+//            }
+//        });
 
     }
 
     public void sound6(View v) {
         L6.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 16).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f6);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L6.setPressed(false);
-            }
-        });
+//            }
+//        });
     }
 
     public void sound7(View v) {
         L7.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 17).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f7);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L7.setPressed(false);
-
-            }
-        });
+//
+//            }
+//        });
     }
 
     public void sound8(View v) {
         L8.setPressed(true);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
-        mp.start();
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
+        try {
+            GetSounds.hub.invoke("SendMessage", "Client", 18).get();
+        } catch (InterruptedException e) {
+            // Handle ...
+        } catch (ExecutionException e) {
+            // Handle ...
+        }
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.f1);
+//        mp.start();
+//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//            public void onCompletion(MediaPlayer mp) {
+//                mp.release();
                 L8.setPressed(false);
-            }
-        });
+//            }
+//        });
 
     }
 

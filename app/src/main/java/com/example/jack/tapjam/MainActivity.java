@@ -24,10 +24,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button start = (Button)findViewById(R.id.start_button);
+        ImageButton start = (ImageButton)findViewById(R.id.start_button);
         Log.d("before initialize", "1");
         Intent external_sounds = new Intent(Intent.ACTION_SYNC, null, this, GetSounds.class);
         startService(external_sounds);
+        PlaySounds.context = getApplicationContext();
+        Intent play_sounds = new Intent(Intent.ACTION_SYNC, null, this, PlaySounds.class);
+        startService(play_sounds);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,11 +53,12 @@ public class MainActivity extends Activity {
     public void UpdateStatus( String status )
     {
         final String fStatus = status;
-        handler.post(new Runnable(){
+        handler.post(new Runnable() {
             @Override
             public void run() {
                 System.out.println(fStatus);
-            }});
+            }
+        });
     }
 
 
